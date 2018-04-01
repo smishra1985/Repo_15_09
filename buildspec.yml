@@ -12,7 +12,7 @@ phases:
       #- echo Entered the install phase...
       - sudo apt-get update -y
       - sudo apt-get install -y maven
-  pre_build:
+  #pre_build:
     #commands:
      # - echo Entered the pre_build phase...
       #- docker login –u User –p $LOGIN_PASSWORD
@@ -21,14 +21,14 @@ phases:
       #- echo Entered the build phase...
       #- echo Build started on `date`
       - mvn clean compile install
-  post_build:
-    commands:
+  #post_build:
+    #commands:
       #- echo Entered the post_build phase...
       #- echo Build completed on `date`
-artifacts:
-  files:
+#artifacts:
+  #files:
    # - target/messageUtil-1.0.jar
-  discard-paths: yes
-cache:
-  paths:
+  #discard-paths: yes
+#cache:
+  #paths:
    # - '/root/.m2/**/*'
