@@ -20,7 +20,7 @@ phases:
     commands:
       #- echo Entered the build phase...
       #- echo Build started on `date`
-      - mvn clean compile install
+      - sudo mvn clean compile install
   #post_build:
     #commands:
       #- echo Entered the post_build phase...
