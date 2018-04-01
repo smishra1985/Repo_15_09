@@ -9,26 +9,26 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Entered the install phase...
-      - apt-get update -y
-      - apt-get install -y maven
+      #- echo Entered the install phase...
+      - sudo apt-get update -y
+      - sudo apt-get install -y maven
   pre_build:
-    commands:
-      - echo Entered the pre_build phase...
-      - docker login –u User –p $LOGIN_PASSWORD
+    #commands:
+     # - echo Entered the pre_build phase...
+      #- docker login –u User –p $LOGIN_PASSWORD
   build:
     commands:
-      - echo Entered the build phase...
-      - echo Build started on `date`
+      #- echo Entered the build phase...
+      #- echo Build started on `date`
       - mvn clean compile install
   post_build:
     commands:
-      - echo Entered the post_build phase...
-      - echo Build completed on `date`
+      #- echo Entered the post_build phase...
+      #- echo Build completed on `date`
 artifacts:
   files:
-    - target/messageUtil-1.0.jar
+   # - target/messageUtil-1.0.jar
   discard-paths: yes
 cache:
   paths:
-    - '/root/.m2/**/*'
+   # - '/root/.m2/**/*'
